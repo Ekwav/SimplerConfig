@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>Ekwav</authors>
+    <owners>Ekwav</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/Ekwav/SimplerConfig</projectUrl>
+    <description>Simpler than other Config Providers, access settings by SimplerConfig.Instance["key:subkey"]</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>Copyright 2020</copyright>
+    <tags>Config Simple Settings Configuration Json Commandline Arguments</tags>
+  </metadata>
+</package>

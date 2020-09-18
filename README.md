@@ -3,8 +3,11 @@ This package provides you with a simple-config option for your C# project.
 
 ## Usage
 ```
-string setting = SimplerConfig.Instance["settingsKey"];
+using SimplerConfig;
+var setting = Config.Instance["KEY"];
+var nestedSetting = Config.Instance["TopKey:SubKey"];
 ```
+
 
 ## Options
 1. Default Configurations should be placed in `appsettings.json`.
@@ -25,7 +28,7 @@ Example:
 ```
 Access with 
 ```
-SimplerConfig.Instance["plugin:name"]
+SimplerConfig.Config.Instance["plugin:name"]
 ```
 You can overwrite it by 
 * changing it in `custom.conf.json`

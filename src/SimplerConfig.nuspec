@@ -9,9 +9,18 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
     <projectUrl>https://github.com/Ekwav/SimplerConfig</projectUrl>
-    <description>Simpler than other Config Providers, access settings by SimplerConfig.Instance["key:subkey"]</description>
+    <description>Simpler than other Config Providers, access settings by SimplerConfig.Config.Instance["key:subkey"]</description>
     <releaseNotes>Initial release.</releaseNotes>
     <copyright>Copyright 2020</copyright>
     <tags>Config Simple Settings Configuration Json Commandline Arguments</tags>
+    <dependencies>
+      <group targetFramework="netstandard2.0">
+        <dependency id="Microsoft.Extensions.Configuration" version="3.1.7" />
+        <dependency id="Microsoft.Extensions.Configuration.CommandLine" version="3.1.7" />
+        <dependency id="Microsoft.Extensions.Configuration.EnvironmentVariables" version="3.1.7" />
+        <dependency id="Microsoft.Extensions.Configuration.Json" version="3.1.7" />
+
+      </group>
+    </dependencies>
   </metadata>
 </package>

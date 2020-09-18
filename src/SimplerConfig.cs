@@ -5,7 +5,7 @@ using Microsoft.Extensions.Configuration;
 namespace SimplerConfig
 {
 
-    public class SimplerConfig : ISimplerConfig
+    public class Config : ISimplerConfig
     {
         public string[] StartArgs { get; set; }
 
@@ -17,11 +17,11 @@ namespace SimplerConfig
         /// <value></value>
         public static ISimplerConfig Instance { get; set; }
 
-        public SimplerConfig () { }
+        public Config () { }
 
-        static SimplerConfig()
+        static Config()
         {
-            Instance = new SimplerConfig();
+            Instance = new Config();
         }
 
         /// <summary>

@@ -7,6 +7,10 @@ namespace SimplerConfig
         /// </summary>
         string this[string key] { get; }
 
+        /// <summary>
+        /// CommandLine Arguments passed
+        /// </summary>
+        /// <value></value>
         string[] StartArgs { set; }
     }
 }

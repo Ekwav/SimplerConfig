@@ -1,6 +1,8 @@
 # SimplerConfig
 This package provides you with a simple-config option for your C# project.
 
+[![NuGet](https://img.shields.io/nuget/v/SimplerConfig.svg?style=flat)](https://www.nuget.org/packages/SimplerConfig/)
+
 ## Usage
 ```
 using SimplerConfig;

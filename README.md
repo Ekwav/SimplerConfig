@@ -6,8 +6,8 @@ This package provides you with a simple-config option for your C# project.
 ## Usage
 ```
 using SimplerConfig;
-var setting = Config.Instance["KEY"];
-var nestedSetting = Config.Instance["TopKey:SubKey"];
+var setting = SConfig.Instance["KEY"];
+var nestedSetting = SConfig.Instance["TopKey:SubKey"];
 ```
 
 
@@ -30,12 +30,14 @@ Example:
 ```
 Access with 
 ```
-SimplerConfig.Config.Instance["plugin:name"]
+SimplerConfig.SConfig.Instance["plugin:name"]
 ```
 You can overwrite it by 
 * changing it in `custom.conf.json`
 * setting `plugin:name="YourName"` 
 * or by passing `--plugin:name="AnotherName"`
+
+
 
 If you can think of a simple way please open an issue :)
 

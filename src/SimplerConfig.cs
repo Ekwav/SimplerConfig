@@ -4,11 +4,20 @@ using Microsoft.Extensions.Configuration;
 
 namespace SimplerConfig
 {
-
-    public class Config : ISimplerConfig
+    /// <summary>
+    /// Default implementation for ConfigProfider
+    /// </summary>
+    public class SConfig : ISimplerConfig
     {
+        /// <summary>
+        /// Arguments passed to `Main` on Startup. Has to be set manually
+        /// </summary>
+        /// <value></value>
         public string[] StartArgs { get; set; }
 
+        /// <summary>
+        /// Name of additonal file containing settings that will overwrite the defaults
+        /// </summary>
         public static string CustomConfigName = "custom.conf.json";
 
         /// <summary>
@@ -17,11 +26,14 @@ namespace SimplerConfig
         /// <value></value>
         public static ISimplerConfig Instance { get; set; }
 
-        public Config () { }
+        /// <summary>
+        /// Default Constructor
+        /// </summary>
+        public SConfig () { }
 
-        static Config()
+        static SConfig()
         {
-            Instance = new Config();
+            Instance = new SConfig();
         }
 
         /// <summary>
@@ -60,5 +72,13 @@ namespace SimplerConfig
                 return appRoot;
             }
         }
+    }
+
+    /// <summary>
+    /// Legacy Api consider using <see cref="SConfig"/> wich is less likely to conflict with other namespaces
+    /// </summary>
+    public class Config : SConfig
+    {
+
     }
 }

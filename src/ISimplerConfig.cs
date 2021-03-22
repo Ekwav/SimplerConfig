@@ -1,5 +1,8 @@
 namespace SimplerConfig
 {
+    /// <summary>
+    /// Interface for a simplified ConfigProvider
+    /// </summary>
     public interface ISimplerConfig
     {
         /// <summary>

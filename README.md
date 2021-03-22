@@ -60,3 +60,9 @@ If you want to include the settings with your build you have to add the followin
 ```
 
 
+## Packaging
+This project was packaged with
+```
+dotnet pack SimplerConfig.csproj -p:NuspecFile=SimplerConfig.nuspec
+```
+don't forget to update versions and dependencies!

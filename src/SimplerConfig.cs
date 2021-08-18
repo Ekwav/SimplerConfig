@@ -26,6 +26,8 @@ namespace SimplerConfig
         /// <value></value>
         public static ISimplerConfig Instance { get; set; }
 
+        private IConfigurationRoot _appSettings;
+
         /// <summary>
         /// Default Constructor
         /// </summary>
@@ -44,17 +46,28 @@ namespace SimplerConfig
         {
             get
             {
-                var builder = new ConfigurationBuilder ()
-                    .SetBasePath (ApplicationExeDirectory)
-                    .AddJsonFile ("appsettings.json", true, false)
-                    .AddJsonFile (CustomConfigName, true, false)
-                    .AddEnvironmentVariables ();
-
-                if (StartArgs != null)
-                    builder = builder.AddCommandLine (StartArgs);
-
-                return builder.Build ();
+                if(_appSettings == null)
+                    _appSettings = CreateNew();
+                return _appSettings;
             }
+        }
+
+        /// <summary>
+        /// Creates a new instance of <see cref="IConfigurationRoot">
+        /// </summary>
+        /// <returns></returns>
+        protected IConfigurationRoot CreateNew()
+        {
+            var builder = new ConfigurationBuilder ()
+                .SetBasePath (ApplicationExeDirectory)
+                .AddJsonFile ("appsettings.json", true, false)
+                .AddJsonFile (CustomConfigName, true, false)
+                .AddEnvironmentVariables ();
+
+            if (StartArgs != null)
+                builder = builder.AddCommandLine (StartArgs);
+
+            return builder.Build ();
         }
 
         /// <summary>

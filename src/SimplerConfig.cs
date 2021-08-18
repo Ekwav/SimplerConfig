@@ -46,8 +46,8 @@ namespace SimplerConfig
             {
                 var builder = new ConfigurationBuilder ()
                     .SetBasePath (ApplicationExeDirectory)
-                    .AddJsonFile ("appsettings.json",true)
-                    .AddJsonFile (CustomConfigName, true, true)
+                    .AddJsonFile ("appsettings.json", true, false)
+                    .AddJsonFile (CustomConfigName, true, false)
                     .AddEnvironmentVariables ();
 
                 if (StartArgs != null)
